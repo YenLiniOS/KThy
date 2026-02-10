@@ -1,0 +1,14 @@
+# =========================================
+#!name = 🐾 Sound Cloud Go+ 😋
+#!desc = Module Sound Cloud Go+ Nghe nhạc như 🎶👊👂 by Khổng Mạnh Yên — Mở Khoá icon xịn (chỉ để sĩ 😜)
+# Mở khoá Premium cho ứng dụng Sound Cloud Go+ 
+#!author= Mạnh Yên (Kthy) 
+# 💬 Web: https://beacons.ai/o.oyen
+# 🫆 Tạo bởi: Khổng Mạnh Yên  
+#!version= 1.6
+# =========================================
+
+[Script]
+SoundCloudGo+=type=http-response,pattern=https://api-mobile.soundcloud.com/configuration/ios,requires-body=1,script-path=https://raw.githubusercontent.com/YenLiniOS/KThy/refs/heads/main/Scripts/SoundCloud.js
+[MITM]
+hostname= %APPEND% api-mobile.soundcloud.com

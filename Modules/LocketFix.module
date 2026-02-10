@@ -1,0 +1,33 @@
+# =============================
+#!name = 🐾 Locket Gold 💛
+#!desc = Module Locket Gold ~ Đã Fix lỗi by Khổng Mạnh Yên 👑
+# Mở khoá Gold cho ứng dụng Locket Widget 
+#!author= Mạnh Yên (Kthy) 💞
+# 💬 Web: https://beacons.ai/o.oyen  
+# 🫆 Tạo bởi: Khổng Mạnh Yên 🐥
+#!version= 2
+# =============================
+[General]
+user-agent = Locket/1.0.0 (iPhone; iOS 26; Scale/3.00)
+
+dns-server=1.1.1.1,1.0.0.1,8.8.8.8
+doh-server=https://1.1.1.1/dns-query,https://dns.google/dns-query
+ipv6=true
+network-framework=true
+http3=true
+udp-timeout=12
+connect-timeout=8
+read-timeout=15
+
+[Script]
+# =============================
+# Locket💛
+# =============================
+revenuecat = type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$),requires-body=true,max-size=-1,timeout=60,script-path=https://raw.githubusercontent.com/YenLiniOS/KThy/refs/heads/main/Scripts/locketfix.js
+
+# ==== Phiên bản fix lỗi dành cho App Locket Widget =====
+
+deleteHeader = type=http-request,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers),script-path=https://raw.githubusercontent.com/YenLiniOS/KThy/refs/heads/main/Scripts/headerfix.js,timeout=60
+
+[MITM]
+hostname = %APPEND%, api.revenuecat.com, locket.camera

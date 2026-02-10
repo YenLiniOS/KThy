@@ -1,0 +1,38 @@
+# =============================
+#!name = 🐾 PicsArt Gold 🐣
+#!desc = Module PicsArt by Khổng Mạnh Yên 👑
+# Mở khoá Gold cho ứng dụng PicsArt 
+#!author= Mạnh Yên (Kthy) 
+# 💬 Web: https://beacons.ai/o.oyen
+# 🫆 Tạo bởi: Khổng Mạnh Yên 🐥
+#!version= 1
+# =============================
+#!icon=https://static.picsart.com/images/picsart-icon.png
+
+
+[Script]
+PicsArt = type=http-request,pattern=^https:\/\/api\.picsart\.com\/gw-v2\/shop\/subscription\/apple\/purchases,script-path=https://raw.githubusercontent.com/YenLiniOS/KThy/refs/heads/main/Scripts/PicsArt.js,requires-body=true,timeout=60
+
+[Rule]
+DOMAIN-SUFFIX,ads.mopub.com,REJECT
+DOMAIN-SUFFIX,ads.mediation.mopub.com,REJECT
+DOMAIN-SUFFIX,app-measurement.com,REJECT
+DOMAIN-SUFFIX,doubleclick.net,REJECT
+DOMAIN-SUFFIX,googlesyndication.com,REJECT
+
+DOMAIN-SUFFIX,google-analytics.com,REJECT
+DOMAIN-SUFFIX,adjust.com,REJECT
+DOMAIN-SUFFIX,branch.io,REJECT
+DOMAIN-SUFFIX,appsflyer.com,REJECT
+DOMAIN-SUFFIX,crashlytics.com,REJECT
+DOMAIN-SUFFIX,facebook.com,REJECT
+DOMAIN-SUFFIX,facebook.net,REJECT
+
+DOMAIN-SUFFIX,segment.io,REJECT
+DOMAIN-SUFFIX,amplitude.com,REJECT
+DOMAIN-SUFFIX,statsig.com,REJECT
+
+[MITM]
+hostname = api.picsart.com, *.picsart.com
+
+#!author= Mạnh Yên (Kthy) ⚽️

@@ -1,0 +1,25 @@
+# =============================
+#!name= 🐾VSCO Premium 2026 - Khổng Mạnh Yên🐣
+#!desc=Mở khoá hơn 200+ mẫu màu chỉnh ảnh |  Mở khoá Vip ~ Đã Fix lỗi by Khổng Mạnh Yên 👑
+#!tag=Unlock full VSCO Premium qua RevenueCat Bypass
+#!author= Mạnh Yên (Kthy) 💞
+# 💬 Web: https://beacons.ai/o.oyen  
+# 🫆 Tạo bởi: Khổng Mạnh Yên 🐥
+#!version= 2
+# =============================
+
+
+[General]
+bypass-system = true
+skip-proxy = *.local, *.crashlytics.com
+tun-excluded-routes = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12
+
+[MITM]
+hostname = api.revenuecat.com, buy.itunes.apple.com
+
+[Script]
+http-response ^https://api\.revenuecat\.com/.+/(receipts$|subscribers/[^/]+$) script-path=https://raw.githubusercontent.com/quocchienn/Make/refs/heads/crack/crack.js, requires-body=true, timeout=5, tag=Crack
+http-request ^https://api.revenuecat.com/.+/(receipts$|subscribers/?(.*?)*$) script-path=https://raw.githubusercontent.com/YenLiniOS/KThy/refs/heads/main/Scripts/Vsco.js, requires-body=true, timeout=5, tag=VSCO
+
+#!author= Mạnh Yên (Kthy) 💞
+
